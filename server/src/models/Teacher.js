@@ -7,7 +7,8 @@ const mongoose = require('mongoose')
 const schema = mongoose.Schema({
   teacherID: {
     type: String,
-    require: true
+    require: true,
+    unique: true
   },
   name: {
     type: String,
@@ -43,9 +44,8 @@ const schema = mongoose.Schema({
     default: null
   }]
 }, {
+  collection: 'Teacher',
   timestamps: true
-}, {
-  collection: 'Teacher'
 })
 
 module.exports = mongoose.model('teacher', schema)

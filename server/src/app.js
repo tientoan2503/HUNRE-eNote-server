@@ -5,16 +5,15 @@
 const express = require('express')
 const app = express()
 const morgan = require('morgan')
-const port = 8888
+const port = 8866
 const db = require('./config/db')
+const router = require('./routers/index.router')
 
 app.use(morgan('combined'))
 
 db.connect()
 
-app.get('/', (req, res) => {
-  res.send('Hello World')
-})
+router(app)
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)

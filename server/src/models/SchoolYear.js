@@ -12,6 +12,10 @@ const schema = new mongoose.Schema({
   yearEnd: {
     type: String,
     require: true
+  },
+  semester: {
+    type: String,
+    require: true
   }
 }, {
   collection: 'SchoolYear'

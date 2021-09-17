@@ -7,7 +7,8 @@ const mongoose = require('mongoose')
 const schema = mongoose.Schema({
   studentID: {
     type: String,
-    require: true
+    require: true,
+    unique: true
   },
   name: {
     type: String,
@@ -19,7 +20,8 @@ const schema = mongoose.Schema({
   },
   phone: {
     type: String,
-    require: true
+    require: true,
+    unique: true
   },
   email: {
     type: String,
@@ -27,7 +29,8 @@ const schema = mongoose.Schema({
   },
   IDNumber: {
     type: String,
-    require: true
+    require: true,
+    unique: true
   },
   dob: {
     type: Date,
@@ -43,16 +46,16 @@ const schema = mongoose.Schema({
   },
   avatar: {
     type: String,
-    require: true
+    default: null
   },
   class: {
     type: String,
-    ref: 'class'
+    ref: 'class',
+    default: null
   }
 }, {
+  collection: 'Student',
   timestamps: true
-}, {
-  collection: 'Student'
 })
 
 module.exports = mongoose.model('student', schema)

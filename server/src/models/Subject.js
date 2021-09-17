@@ -9,6 +9,11 @@ const schema = mongoose.Schema({
     type: String,
     require: true
   },
+  subjectCode: {
+    type: String,
+    require: true,
+    unique: true
+  },
   credit: {
     type: Number,
     require: true
@@ -32,11 +37,14 @@ const schema = mongoose.Schema({
   semester: {
     type: String,
     ref: 'semester'
+  },
+  schoolYear: {
+    type: String,
+    ref: 'schoolYear'
   }
 }, {
+  collection: 'Subject',
   timestamps: true
-}, {
-  collection: 'Subject'
 })
 
 module.exports = mongoose.model('subject', schema)

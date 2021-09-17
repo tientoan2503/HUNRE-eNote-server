@@ -7,15 +7,17 @@ const mongoose = require('mongoose')
 const schema = mongoose.Schema({
   name: {
     type: String,
-    require: true
+    require: true,
+    unique: true
   },
-  teacher: {
+  /* teacher: {
     type: String,
     ref: 'teacher'
-  },
+  }, */
   students: [{
     type: String,
-    ref: 'student'
+    ref: 'student',
+    default: null
   }],
   major: {
     type: String,
@@ -23,12 +25,12 @@ const schema = mongoose.Schema({
   },
   subjects: [{
     type: String,
-    ref: 'subject'
+    ref: 'subject',
+    default: null
   }]
 }, {
+  collection: 'Class',
   timestamps: true
-}, {
-  collection: 'Class'
 })
 
 module.exports = mongoose.model('class', schema)
