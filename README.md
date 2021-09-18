@@ -1,2 +1,2 @@
 # HUNRE-eNote
-Phần mềm sổ tay Sinh viên 
+Phần mềm sổ tay Sinh viên
