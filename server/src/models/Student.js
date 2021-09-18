@@ -25,7 +25,8 @@ const schema = mongoose.Schema({
   },
   email: {
     type: String,
-    require: true
+    require: true,
+    unique: true
   },
   IDNumber: {
     type: String,

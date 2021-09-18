@@ -10,10 +10,11 @@ const schema = mongoose.Schema({
     require: true,
     unique: true
   },
-  /* teacher: {
+    homeRoomTeacher: {
     type: String,
-    ref: 'teacher'
-  }, */
+    ref: 'teacher',
+    default: null
+  },
   students: [{
     type: String,
     ref: 'student',

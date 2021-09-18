@@ -4,7 +4,7 @@
 
 const Class = require('../models/Class')
 
-const getAllByMajor = async (req, res) => {
+const getAll = async (req, res) => {
   try {
     const classes = await Class.find({})
       .populate('students')
@@ -25,6 +25,6 @@ const createClass = async (req, res) => {
 }
 
 module.exports = {
-  getAllByMajor,
+  getAll,
   createClass
 }

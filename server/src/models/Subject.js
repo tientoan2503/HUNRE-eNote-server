@@ -7,7 +7,8 @@ const mongoose = require('mongoose')
 const schema = mongoose.Schema({
   name: {
     type: String,
-    require: true
+    require: true,
+    unique: true
   },
   subjectCode: {
     type: String,
@@ -33,10 +34,6 @@ const schema = mongoose.Schema({
   weekdays: {
     type: String,
     require: true
-  },
-  semester: {
-    type: String,
-    ref: 'semester'
   },
   schoolYear: {
     type: String,

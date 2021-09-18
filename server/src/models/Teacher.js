@@ -5,7 +5,7 @@
 const mongoose = require('mongoose')
 
 const schema = mongoose.Schema({
-  teacherID: {
+  teacherCode: {
     type: String,
     require: true,
     unique: true
@@ -24,23 +24,15 @@ const schema = mongoose.Schema({
   },
   email: {
     type: String,
-    require: true
+    require: true,
+    unique: true
   },
   avatar: {
     type: String,
     require: true
   },
   subjects: [{
-    type: {
-      class: {
-        type: String,
-        ref: 'class'
-      },
-      subject: {
-        type: String,
-        ref: 'subject'
-      }
-    },
+    type: Object,
     default: null
   }]
 }, {

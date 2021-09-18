@@ -6,6 +6,7 @@ const express = require('express')
 const Router = express.Router()
 const controller = require('../controllers/class.controller')
 
-Router.get('/', controller.getAllByMajor)
+Router.get('/', controller.getAll)
+  .post('/', controller.createClass)
 
 module.exports = Router
