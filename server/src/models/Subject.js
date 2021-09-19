@@ -10,7 +10,7 @@ const schema = mongoose.Schema({
     require: true,
     unique: true
   },
-  subjectCode: {
+  subjectID: {
     type: String,
     require: true,
     unique: true

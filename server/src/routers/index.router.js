@@ -2,31 +2,36 @@
  * Create by ToanNTe on 17/09/2021
  */
 
-const schoolYearRouter = require('./schoolYear.router')
-const studentRouter = require('./student.router')
-const majorRouter = require('./major.router')
-const facultyRouter = require('./faculty.router')
-const classRouter = require('./class.router')
-const subjectRouter = require('./subject.router')
-const teacherRouter = require('./teacher.router')
+const schoolYearRouter = require('./model.routers/schoolYear.router')
+const studentRouter = require('./model.routers/student.router')
+const majorRouter = require('./model.routers/major.router')
+const facultyRouter = require('./model.routers/faculty.router')
+const classRouter = require('./model.routers/class.router')
+const subjectRouter = require('./model.routers/subject.router')
+const teacherRouter = require('./model.routers/teacher.router')
+const authRouter = require('./authentication.router')
 
 function route(app) {
 
-  app.use('/schoolYears', schoolYearRouter)
+  // Router for models
+  app.use('/api/schoolYears', schoolYearRouter)
 
-  app.use('/students', studentRouter)
+  app.use('/api/students', studentRouter)
 
-  app.use('/majors', majorRouter)
+  app.use('/api/majors', majorRouter)
 
-  app.use('/faculties', facultyRouter)
+  app.use('/api/faculties', facultyRouter)
 
-  app.use('/faculties', facultyRouter)
+  app.use('/api/faculties', facultyRouter)
 
-  app.use('/classes', classRouter)
+  app.use('/api/classes', classRouter)
 
-  app.use('/subjects', subjectRouter)
+  app.use('/api/subjects', subjectRouter)
 
-  app.use('/teachers', teacherRouter)
+  app.use('/api/teachers', teacherRouter)
+
+  // Router for authentication
+  app.use('/api/login', authRouter)
 
 }
 

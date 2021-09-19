@@ -2,7 +2,7 @@
  * Create by ToanNTe on 17/09/2021
  */
 
-const Student = require('../models/Student')
+const Student = require('../../models/Student')
 
 const getAll = async (req, res) => {
   try {

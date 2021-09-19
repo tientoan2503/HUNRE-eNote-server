@@ -2,7 +2,7 @@
  * Create by ToanNTe on 17/09/2021
  */
 
-const Major = require('../models/Major')
+const Major = require('../../models/Major')
 
 const getAll = async (req, res) => {
   try {

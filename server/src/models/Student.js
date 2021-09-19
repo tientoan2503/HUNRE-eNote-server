@@ -53,6 +53,10 @@ const schema = mongoose.Schema({
     type: String,
     ref: 'class',
     default: null
+  },
+  password: {
+    type: String,
+    default: null
   }
 }, {
   collection: 'Student',

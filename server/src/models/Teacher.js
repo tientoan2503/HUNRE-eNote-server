@@ -5,7 +5,7 @@
 const mongoose = require('mongoose')
 
 const schema = mongoose.Schema({
-  teacherCode: {
+  teacherID: {
     type: String,
     require: true,
     unique: true

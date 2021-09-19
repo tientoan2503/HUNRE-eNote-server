@@ -2,7 +2,7 @@
 //  * Create by ToanNTe on 17/09/2021
 //  */
 
-const Class = require('../models/Class')
+const Class = require('../../models/Class')
 
 const getAll = async (req, res) => {
   try {

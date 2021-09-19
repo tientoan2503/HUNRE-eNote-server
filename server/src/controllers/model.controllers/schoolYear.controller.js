@@ -2,7 +2,7 @@
  * Create by ToanNTe on 17/09/2021
  */
 
-const SchoolYear = require('../models/SchoolYear')
+const SchoolYear = require('../../models/SchoolYear')
 
 const getAll = async (req, res) => {
   try {

@@ -5,11 +5,13 @@
 const express = require('express')
 const app = express()
 const morgan = require('morgan')
+const bodyParser = require('body-parser')
 const port = 8866
 const db = require('./config/db')
 const router = require('./routers/index.router')
 
 app.use(morgan('combined'))
+app.use(bodyParser.json())
 
 db.connect()
 

@@ -4,7 +4,7 @@
 
 const express = require('express')
 const Router = express.Router()
-const controller = require('../controllers/student.controller')
+const controller = require('../../controllers/model.controllers/student.controller')
 
 Router.get('/', controller.getAll)
   .post('/', controller.createStudent)

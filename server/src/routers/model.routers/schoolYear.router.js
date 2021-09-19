@@ -4,7 +4,7 @@
 
 const express = require('express')
 const Router = express.Router()
-const controller = require('../controllers/schoolYear.controller')
+const controller = require('../../controllers/model.controllers/schoolYear.controller')
 
 Router
   .get('/', controller.getAll)
