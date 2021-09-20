@@ -3,10 +3,12 @@
  */
 
 const mongoose = require("mongoose");
+const USER = "D2T-team"
+const PASSWORD = "Cpx88rg7kfHOO5qn"
 
 async function connect() {
   try {
-    await mongoose.connect("mongodb://localhost:27017/HUNRE-eNote", {
+    await mongoose.connect(`mongodb+srv://${USER}:${PASSWORD}@cluster0.pon4h.mongodb.net/HUNRE-eNote?retryWrites=true&w=majority`, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
