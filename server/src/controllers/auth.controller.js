@@ -31,7 +31,7 @@ const login = async (req, res) => {
     // if login successful, return accessToken
     const accessToken = jwt.sign(studentID, ACCESS_TOKEN_SCERET)
     res.json({ success: true, message: 'Login successfully', token: accessToken })
-  } catch (err) {
+} catch (err) {
     console.error(err)
   }
 }
