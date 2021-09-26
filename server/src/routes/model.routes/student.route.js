@@ -5,8 +5,9 @@
 const express = require('express')
 const Router = express.Router()
 const controller = require('../../controllers/model.controllers/student.controller')
+const verifyToken = require('../../middleware/auth')
 
-Router.get('/', controller.getAll)
+Router.get('/', verifyToken, controller.getAll)
   .post('/', controller.createStudent)
 
 module.exports = Router

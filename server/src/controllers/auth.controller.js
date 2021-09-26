@@ -5,6 +5,9 @@
 const Student = require('../models/Student')
 const Teacher = require('../models/Teacher')
 const argon2 = require('argon2')
+const jwt = require('jsonwebtoken')
+
+const ACCESS_TOKEN_SCERET = "D2T_access_token_sceret"
 
 // login student
 const login = async (req, res) => {
@@ -25,7 +28,10 @@ const login = async (req, res) => {
     if (!passwordValid)
       return res.status(400).json({ success: false, message: 'Username or password is incorrect' })
 
-    res.json({ success: true, message: 'Login successful' })
+    // if login successful, return accessToken
+    // expire: 30 minutes
+    const accessToken = jwt.sign(studentID, ACCESS_TOKEN_SCERET)
+    res.json({ success: true, token: accessToken })
   } catch (err) {
     console.error(err)
   }
