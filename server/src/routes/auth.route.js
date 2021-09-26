@@ -5,7 +5,7 @@
 
 const express = require('express')
 const Router = express.Router()
-const controller = require('../controllers/authentication.controller')
+const controller = require('../controllers/auth.controller')
 
 // @router /login/teacher
 // login cho giang vien

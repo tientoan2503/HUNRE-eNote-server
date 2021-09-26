@@ -2,14 +2,14 @@
  * Create by ToanNTe on 17/09/2021
  */
 
-const schoolYearRouter = require('./model.routers/schoolYear.router')
-const studentRouter = require('./model.routers/student.router')
-const majorRouter = require('./model.routers/major.router')
-const facultyRouter = require('./model.routers/faculty.router')
-const classRouter = require('./model.routers/class.router')
-const subjectRouter = require('./model.routers/subject.router')
-const teacherRouter = require('./model.routers/teacher.router')
-const authRouter = require('./authentication.router')
+const schoolYearRouter = require('./model.routes/schoolYear.route')
+const studentRouter = require('./model.routes/student.route')
+const majorRouter = require('./model.routes/major.route')
+const facultyRouter = require('./model.routes/faculty.route')
+const classRouter = require('./model.routes/class.route')
+const subjectRouter = require('./model.routes/subject.route')
+const teacherRouter = require('./model.routes/teacher.route')
+const authRouter = require('./auth.route')
 
 function route(app) {
 
